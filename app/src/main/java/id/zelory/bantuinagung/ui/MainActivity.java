@@ -56,7 +56,8 @@ public class MainActivity extends BenihActivity implements MahasiswaController.P
 
     @Override
     public void showMahasiswa(List<Mahasiswa> mahasiswaList) {
-
+        mahasiswaAdapter.clear();
+        mahasiswaAdapter.add(mahasiswaList);
     }
 
     @Override
