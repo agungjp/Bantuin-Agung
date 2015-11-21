@@ -12,7 +12,7 @@ public class Mahasiswa implements Parcelable {
 
     //data apa saja yg dipunya mahasiswa
     private String nama;
-    private int nim;
+    private String nim;
     private String alamat;
 
     /**
@@ -29,7 +29,7 @@ public class Mahasiswa implements Parcelable {
      */
     protected Mahasiswa(Parcel in) {
         nama = in.readString();
-        nim = in.readInt();
+        nim = in.readString();
         alamat = in.readString();
     }
 
@@ -54,11 +54,11 @@ public class Mahasiswa implements Parcelable {
         this.nama = nama;
     }
 
-    public int getNim() {
+    public String getNim() {
         return nim;
     }
 
-    public void setNim(int nim) {
+    public void setNim(String nim) {
         this.nim = nim;
     }
 
@@ -78,7 +78,7 @@ public class Mahasiswa implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(nama);
-        dest.writeInt(nim);
+        dest.writeString(nim);
         dest.writeString(alamat);
     }
 
@@ -93,7 +93,7 @@ public class Mahasiswa implements Parcelable {
     public boolean equals(Object o) {
         if (o instanceof Mahasiswa) {
             Mahasiswa mahasiswa = (Mahasiswa) o;
-            return mahasiswa.nim == this.nim;
+            return mahasiswa.nim.equals(this.nim);
         }
 
         return false;
