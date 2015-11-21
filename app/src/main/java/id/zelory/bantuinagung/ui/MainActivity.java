@@ -105,7 +105,9 @@ public class MainActivity extends BenihActivity implements MahasiswaController.P
     @Override
     public void showError(Throwable throwable) {
         //tampilin pesan errornya apa
-        Snackbar.make(recyclerView, "Terjadi kesalahan: " + throwable.getMessage(), Snackbar.LENGTH_LONG).show();
+        Snackbar snackbar = Snackbar.make(recyclerView, "Terjadi kesalahan: " + throwable.getMessage(), Snackbar.LENGTH_LONG);
+        snackbar.getView().setBackgroundResource(R.color.colorAccent);
+        snackbar.show();
     }
 
     /**
@@ -139,7 +141,9 @@ public class MainActivity extends BenihActivity implements MahasiswaController.P
         Mahasiswa mahasiswa = mahasiswaAdapter.getData().get(position);
 
         //terus mau diapain datanya, kalo ini cuma ditampilin namanya
-        Snackbar.make(recyclerView, "Item click: " + mahasiswa.getNama(), Snackbar.LENGTH_LONG).show();
+        Snackbar snackbar = Snackbar.make(recyclerView, "Item click: " + mahasiswa.getNama(), Snackbar.LENGTH_LONG);
+        snackbar.getView().setBackgroundResource(R.color.colorPrimary);
+        snackbar.show();
     }
 
     /**
