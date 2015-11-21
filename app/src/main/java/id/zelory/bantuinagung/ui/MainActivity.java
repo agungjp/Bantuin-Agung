@@ -32,8 +32,7 @@ public class MainActivity extends BenihActivity implements MahasiswaController.P
     private MahasiswaAdapter mahasiswaAdapter;
 
     //Ini sih recycler view nya yg di xml
-    @Bind(R.id.recycler_view)
-    BenihRecyclerView recyclerView;
+    @Bind(R.id.recycler_view) BenihRecyclerView recyclerView;
 
     /**
      * Layout untuk activity ini

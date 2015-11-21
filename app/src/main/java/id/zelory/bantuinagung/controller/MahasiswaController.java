@@ -46,27 +46,27 @@ public class MahasiswaController extends BenihController<MahasiswaController.Pre
                 .map(MahasiswaResponse::getMahasiswa)
                         //listen sampe pekerjaannya selesai
                 .subscribe(mahasiswaList -> {
-                            //simpen datanya di mahasiswaList
-                            this.mahasiswaList = mahasiswaList;
-                            //kalo presenternya masih ada kita tampilin datanya
-                            if (presenter != null) {
-                                //tampilin datanya
-                                presenter.showMahasiswa(this.mahasiswaList);
-                                //ilangin loadingnya
-                                presenter.dismissLoading();
-                            }
-                        },
-                        //kalo terjadi error mau ngapain
-                        throwable -> {
-                            //log errornya apa
-                            Timber.e(throwable.getMessage());
-                            if (presenter != null) {
-                                //tampilin error ke pengguna
-                                presenter.showError(throwable);
-                                //ilangin loadingnya
-                                presenter.dismissLoading();
-                            }
-                        });
+                               //simpen datanya di mahasiswaList
+                               this.mahasiswaList = mahasiswaList;
+                               //kalo presenternya masih ada kita tampilin datanya
+                               if (presenter != null) {
+                                   //tampilin datanya
+                                   presenter.showMahasiswa(this.mahasiswaList);
+                                   //ilangin loadingnya
+                                   presenter.dismissLoading();
+                               }
+                           },
+                           //kalo terjadi error mau ngapain
+                           throwable -> {
+                               //log errornya apa
+                               Timber.e(throwable.getMessage());
+                               if (presenter != null) {
+                                   //tampilin error ke pengguna
+                                   presenter.showError(throwable);
+                                   //ilangin loadingnya
+                                   presenter.dismissLoading();
+                               }
+                           });
     }
 
     /**
