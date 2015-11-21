@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import id.zelory.bantuinagung.data.api.AgungApi;
-import id.zelory.bantuinagung.data.api.MahasiswaResponse;
+import id.zelory.bantuinagung.data.api.response.MahasiswaResponse;
 import id.zelory.bantuinagung.data.model.Mahasiswa;
 import id.zelory.benih.controller.BenihController;
 import id.zelory.benih.util.BenihScheduler;

@@ -1,4 +1,4 @@
-package id.zelory.bantuinagung.data.api;
+package id.zelory.bantuinagung.data.api.response;
 
 
 import java.util.List;

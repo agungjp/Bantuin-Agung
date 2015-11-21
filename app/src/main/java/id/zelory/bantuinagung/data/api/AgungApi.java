@@ -1,6 +1,7 @@
 package id.zelory.bantuinagung.data.api;
 
 
+import id.zelory.bantuinagung.data.api.response.MahasiswaResponse;
 import id.zelory.benih.network.BenihServiceGenerator;
 import retrofit.http.GET;
 import rx.Observable;
